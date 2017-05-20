@@ -1,146 +1,114 @@
-<body>
-  {{> hola}}
-</body>
-<template name="hola">
-  <div>
-    <ul>
-      <li>
-        HOLA COMO ESTAN SIN ROUTES.JS
-      </li>
-    </ul>
-  </div>
-</template>
+
 <template name="formulario">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-    <div class="row contenidopage">
-        <div role="form" class="wpcf7" id="wpcf7-f196-p197-o1" lang="es-ES" dir="ltr">
-        <div class="screen-reader-response"></div>
-        <form action="/2016/inscripciones-2017/#wpcf7-f196-p197-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-          <div style="display: none;">
-              <input type="hidden" name="_wpcf7" value="196" />
-              <input type="hidden" name="_wpcf7_version" value="4.7" />
-              <input type="hidden" name="_wpcf7_locale" value="es_ES" />
-              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f196-p197-o1" />
-              <input type="hidden" name="_wpnonce" value="36c8475e5e" />
-          </div>
-        <div class="row">
-          <div class="columns medium-6"> I DATOS DE INDENTIFICACION DEL 
-            <p>
-              <label> Grado al que Aspira
-                <span class="wpcf7-form-control-wrap grado">
-                  <select name="grado" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
-                    <option value="">---</option>
-                    <option value="Prejardín">Prejardín</option>
-                    <option value="Jardín">Jardín</option>
-                    <option value="Transición">Transición</option>
-                    <option value="Primero de Primaria">Primero de Primaria</option>
-                    <option value="Segundo de Primaria">Segundo de Primaria</option>
-                    <option value="Tercero de Primaria">Tercero de Primaria</option>
-                    <option value="Cuarto de Primaria">Cuarto de Primaria</option>
-                    <option value="Quinto de Primaria">Quinto de Primaria</option>
-                    <option value="Sexto de Bachillerato">Sexto de Bachillerato</option>
-                    <option value="Septimo de Bachillerato">Septimo de Bachillerato</option>
-                    <option value="Octavo de Bachillerato">Octavo de Bachillerato</option>
-                    <option value="Noveno de Bachillerato">Noveno de Bachillerato</option>
-                    <option value="Décimo de Bachillerato">Décimo de Bachillerato</option>
-                    <option value="Undécimo de Bachillerato">Undécimo de Bachillerato</option>
-                  </select>
-                </span>
-              </label>
-            </p>
-            <p>   
-              <label> Alumno 
-                <span class="wpcf7-form-control-wrap alumno">
-                  <select name="alumno" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
-                    <option value="">---</option>
-                    <option value="Alumno Nuevo">Alumno Nuevo</option>
-                    <option value="Reintegro">Reintegro</option>
-                  </select>
-                </span>
-              </label>
-            </p>
-            <p>   
-              <label> Nombre 
-                <span class="wpcf7-form-control-wrap your-name">
-                  <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span> 
-              </label>
-            </p>
-            <p>
-              <label> Apellido 
-                <span class="wpcf7-form-control-wrap apellido">
-                  <input type="text" name="apellido" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p>   
-              <label> Dirección Actual 
-                <span class="wpcf7-form-control-wrap direccion">
-                  <input type="text" name="direccion" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p>
-              <label> Móvil Actual 
-                <span class="wpcf7-form-control-wrap movil">
-                  <input type="text" name="movil" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p>
-              <label> Teléfono 
-                <span class="wpcf7-form-control-wrap telefono">
-                  <input type="text" name="telefono" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-          </div>
-          <div class="columns medium-6">II DATOS DEL NUEVO ACUDIENTE
-            <p>
-              <label> Nombre
-                <span class="wpcf7-form-control-wrap nombre-acudiente">
-                  <input type="text" name="nombre-acudiente" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p> 
-              <label> Apellido
-                <span class="wpcf7-form-control-wrap apellido-acudiente">
-                  <input type="text" name="apellido-acudiente" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p>
-              <label> Móvil 
-                <span class="wpcf7-form-control-wrap movil-acudiente">
-                  <input type="text" name="movil-acudiente" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p>
-              <label> Teléfono
-                <span class="wpcf7-form-control-wrap telefono-acudiente">
-                  <input type="text" name="telefono-acudiente" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                </span>
-              </label>
-            </p>
-            <p>   
-              <label> Tu correo electrónico 
-                <span class="wpcf7-form-control-wrap your-email">
-                  <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
-                </span> 
-              </label>
-            </p>
-            <p>   
-              <input type="submit" value="Enviar Formulario" class="wpcf7-form-control wpcf7-submit large button" />
-            </p>
-          </div>
+  <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="#" id="logo-container" class="brand-logo">INICIO</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#intro">Registros</a></li>
+                    <li><a href="#work">Trabajos</a></li>
+                    <li><a href="#team">Cursos</a></li>
+                    <li><a href="#contact">Contactos</a></li>
+                    <li><a href=" " target="_blank">Descargas</a></li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#intro">Service</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="" target="_blank">Download</a></li>
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
         </div>
-        <div class="wpcf7-response-output wpcf7-display-none"></div>
-        </form>
+    </nav>
+</div>
+
+<!--Hero-->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="text_h center header cd-headline letters type">
+            <span>I Love</span> 
+            <span class="cd-words-wrapper waiting">
+                <b class="is-visible">creating</b>
+                <b>designing</b>
+                <b>developing</b>
+            </span>
+        </h1>
+    </div>
+</div>
+
+
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l6 s12">
+                <form class="col s12" action="contact.php" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="mdi-action-account-circle prefix white-text"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                            <label for="icon_prefix" class="white-text">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="mdi-communication-email prefix white-text"></i>
+                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <label for="icon_email" class="white-text">Email-id</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-editor-mode-edit prefix white-text"></i>
+                            <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                            <label for="icon_prefix2" class="white-text">Message</label>
+                        </div>
+                        <div class="col offset-s7 s5">
+                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                                <i class="mdi-content-send right white-text"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">joashpereira.com</h5>
+                <ul>
+                    <li><a class="white-text" href="http://www.joashpereira.com/">Home</a></li>
+                    <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                    <li>
+                        <a class="white-text" href="https://www.behance.net/joashp">
+                            <i class="small fa fa-behance-square white-text"></i> Behance
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.facebook.com/joash.c.pereira">
+                            <i class="small fa fa-facebook-square white-text"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://github.com/joashp">
+                            <i class="small fa fa-github-square white-text"></i> Github
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/in/joashp">
+                            <i class="small fa fa-linkedin-square white-text"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+    <div class="footer-copyright default_color">
+        <div class="container">
+            Made by <a class="white-text" href="http://joashpereira.com">Joash Pereira</a>. Thanks to <a class="white-text" href="http://materializecss.com/">materializecss</a>
+        </div>
+    </div>
+</footer>
+
+
 </template>
