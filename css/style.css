@@ -9,6 +9,7 @@
 
 .default_color_text{color: #2196F3 !important}
 
+.curso{background-color: #2196F3 !important}
 .icon-block {
     padding: 0 15px;
 }
@@ -257,7 +258,7 @@ nav a.button-collapse {
 }
 
 .parallax-container {
-    max-height: 400px;
+    max-height: 800px;
 }
 
 footer.page-footer {
