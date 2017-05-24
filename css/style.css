@@ -4,7 +4,9 @@
  * Made By Joash Pereira
  * Thanks for MaterializeCSS.com
  */
-
+div.landing:before, div.landing:after {
+        display: none !important;
+    }
 .default_color{background-color: #2196F3 !important}
 .curso_color{background-color: #508695 !important}
 
@@ -51,8 +53,9 @@
 }
 
 #nav_f{
-    box-shadow: none !important; 
-    -webkit-box-shadow:none !important;
+    -webkit-box-shadow: 28px -24px 32px 33px rgba(0,0,0,0.75);
+-moz-box-shadow: 28px -24px 32px 33px rgba(0,0,0,0.75);
+box-shadow: 28px -24px 32px 33px rgba(0,0,0,0.75);
     background-image:url(imagen/fondo.jpg);
 }
 
@@ -293,3 +296,4 @@ footer.page-footer {
 {
     line-height: 2 ; font-size: 1em;
 }
+
