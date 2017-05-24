@@ -16,20 +16,26 @@
     padding: 0 15px;
 }
 
+
 #intro, #work, #team {padding-top: 4rem;}
 
+#index-fondo {
+    min-height: 800px;
+    max-height: 1600px;
+    background-image:url(imagen/fondo.jpg);
 
+    }
 #index-banner {
-    min-height: 632px;
-    max-height: 864px;
-    position: relative;
-    background-color: #2196F3;
+     min-height: 800px;
+    max-height: 1600px;
+    background-image:url(imagen/fondo.jpg);
 }
+
 #index-curso {
-    min-height: 2000px;
-    max-height: 2000px;
+    min-height: 800px;
+    max-height: 1600px;
     position: relative;
-    background-color: #2196F3;
+    
 }
 #linkend2-curso {
     min-height: 230px;
@@ -38,15 +44,16 @@
     background-color: #5e86a6;
 }
 #linkend-curso {
-    min-height: 300px;
+    min-height: 200px;
     max-height: 400px;
     position: relative;
-    background-color: #5e86a6;
+    background-image:url(imagen/fondo.jpg);
 }
 
 #nav_f{
     box-shadow: none !important; 
     -webkit-box-shadow:none !important;
+    background-image:url(imagen/fondo.jpg);
 }
 
 .text_h {
@@ -265,9 +272,7 @@ nav a.button-collapse {
     text-align: center;
 }
 
-.card .card-content p {
-    margin: 1px 1px;
-}
+
 
 .card-avatar .card-content i {
    font-size: 1.5rem;
@@ -283,4 +288,8 @@ nav a.button-collapse {
 
 footer.page-footer {
     margin-top: 0px !important;
+}
+#interlineado
+{
+    line-height: 2 ; font-size: 1em;
 }
