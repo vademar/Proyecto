@@ -38,8 +38,8 @@
     background-color: #5e86a6;
 }
 #linkend-curso {
-    min-height: 200px;
-    max-height: 200px;
+    min-height: 300px;
+    max-height: 400px;
     position: relative;
     background-color: #5e86a6;
 }
@@ -283,8 +283,4 @@ nav a.button-collapse {
 
 footer.page-footer {
     margin-top: 0px !important;
-}
-img
-{
-    width: 200px;height: 200px;
 }
