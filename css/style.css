@@ -6,6 +6,8 @@
  */
 
 .default_color{background-color: #2196F3 !important}
+.curso_color{background-color: #508695 !important}
+
 
 .default_color_text{color: #2196F3 !important}
 
@@ -22,6 +24,24 @@
     max-height: 864px;
     position: relative;
     background-color: #2196F3;
+}
+#index-curso {
+    min-height: 2000px;
+    max-height: 2000px;
+    position: relative;
+    background-color: #2196F3;
+}
+#linkend2-curso {
+    min-height: 230px;
+    max-height: 230px;
+    position: relative;
+    background-color: #5e86a6;
+}
+#linkend-curso {
+    min-height: 200px;
+    max-height: 200px;
+    position: relative;
+    background-color: #5e86a6;
 }
 
 #nav_f{
@@ -254,7 +274,7 @@ nav a.button-collapse {
 }
 
 .card-avatar .card-content .card-title {
-    line-height: 30px !important;
+    line-height: 20px !important;
 }
 
 .parallax-container {
