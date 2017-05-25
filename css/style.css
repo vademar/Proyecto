@@ -22,10 +22,13 @@ div.landing:before, div.landing:after {
 #intro, #work, #team {padding-top: 4rem;}
 
 #index-fondo {
-    min-height: 800px;
+    min-height: 900px;
     max-height: 1600px;
     background-image:url(imagen/fondo.jpg);
-
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 #index-banner {
      min-height: 800px;
@@ -109,9 +112,10 @@ nav ul a {
     font-weight: 300;
     padding: 0px 15px;
 }
-
+/*ul li a*/
 ul li:hover { padding: 1px 4px; }
-a:hover { opacity: 0.5;}
+ul li:hover { opacity: 0.5;}
+
 
 .cd-headline.type .cd-words-wrapper {
     vertical-align: top;
