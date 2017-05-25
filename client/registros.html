@@ -1,53 +1,51 @@
 <template name="registros">
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    
-    {{>barraInicio}}
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">  
 <nav id="index-fondo">
+  {{>barraInicio}}
     <div class="container">   
         <div class="row">
             <div class="col s10">
                 <form class="col s12" action="contact.php" method="post">
                     <div class="row">
-                               <div class="input-field col s6">
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="first_name" type="text" class="validate">
-          <label for="first_name">first_name</label>
-      </div>
-      <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">last_name</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="username" type="text" class="validate">
-        <label for="username">username</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
-        <label for="password">password</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
-      </div>
-    </div>
-    <button type="button" class="btn waves-effect waves-light"><i class="mdi-content-send right"></i></button>
-  </form>
-</div>
-                                 </div>
+                      <div class="input-field col s6">
+                        <div class="row">
+                          <form class="col s12">
+                            <div class="row">
+                              <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                  <label for="first_name">first_name</label>
+                              </div>
+                              <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">last_name</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                <input id="username" type="text" class="validate">
+                                <label for="username">username</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">password</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                              </div>
+                            </div>
+                            <button type="button" class="btn waves-effect waves-light"><i class="mdi-content-send right"></i></button>
+                          </form>
+                        </div>
+                      </div>
                      </div>
                 </form>
             </div>

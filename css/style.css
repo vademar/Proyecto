@@ -110,6 +110,9 @@ nav ul a {
     padding: 0px 15px;
 }
 
+ul li:hover { padding: 1px 4px; }
+a:hover { opacity: 0.5;}
+
 .cd-headline.type .cd-words-wrapper {
     vertical-align: top;
     overflow: hidden;
