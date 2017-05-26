@@ -4,15 +4,19 @@ Template.registros.onRendered(function(){
 Template.registros.events({
 
 	"submit form" : function(e){
-		console.log(e);
+		
 	var user = {
-		"Nombre" : e.target.username.value,
-		"Apellido" : e.target.username.vale,
+		"Nombre" : e.target.Nombre.value,
+		"Apellido" : e.target.Apellido.value,
 		"email" : e.target.email.value,
 		"username" : e.target.username.value,
 		"password" : e.target.password.value,
-
-	}
+      
+	};
+	Accounts.createUser(user, function(e){
+				console.log(user);
+				//
+			});
 	
 	return false
 }

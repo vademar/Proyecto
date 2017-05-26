@@ -10,7 +10,7 @@
 	},
 	"submit form" : function(e){
 		//SERVIDOR
-		Meteor.loginWithPassword(e.target.email.value,e.target.password.value);
+		Meteor.loginWithPassword(e.target.username.value,e.target.password.value);
 		$(".panelForm").css("opacity",0);
 		return false;
 	}
