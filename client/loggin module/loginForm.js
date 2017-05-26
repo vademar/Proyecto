@@ -1,8 +1,9 @@
-Template.loginForm.events({
-	"click #registerbtn" : function(e){
+ Template.loginForm.events({
+	"click #registrar" : function(e){
 		e.preventDefault();
-		myTemplates.set("registerForm");
+		myTemplates.set("registros");
 	},
+
 	"click #close" : function(e){
 		e.preventDefault();
 		$(".panelForm").css("opacity",0);
