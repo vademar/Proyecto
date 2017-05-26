@@ -35,9 +35,6 @@ div.landing:before, div.landing:after {
     max-height: 1600px;
     background-image:url(imagen/fondo.jpg);
 }
-#login {
-     
-}
 
 #index-curso {
     min-height: 800px;
@@ -71,6 +68,15 @@ box-shadow: 28px -24px 32px 33px rgba(0,0,0,0.75);
     font-weight: 100;
     color:white;
 }
+.login-text {
+    padding: 5% 0;
+    font-size: 3.0em;
+    font-weight: 100;
+    color:white;
+}
+.text-panelLogin {
+       color:white;
+}
 
 .brand-logo{
     position: absolute;
@@ -103,6 +109,7 @@ box-shadow: 28px -24px 32px 33px rgba(0,0,0,0.75);
 #work, #team{background: rgb(247, 247, 247);}
 
 .text_pink{color:#EF9A9A;}
+.text{ color:#ffffff; }
 
 nav ul a {
     font-size: 1.2rem;
@@ -318,7 +325,7 @@ footer.page-footer {
   z-index:100;
   padding:10px;
   opacity:1;
-  box-shadow:0px 3px 2px #333
+  box-shadow:0px 0px 0px #333
   min-height: 200px;
     max-height: 430px;
     background-image:url(imagen/fondo.jpg);
