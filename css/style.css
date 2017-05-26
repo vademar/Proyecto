@@ -113,7 +113,7 @@ nav ul a {
     padding: 0px 15px;
 }
 /*ul li a*/
-ul li:hover { padding: 1px 4px; }
+#cabecera li:hover { padding: 1px 4px; }
 ul li:hover { opacity: 0.5;}
 
 
