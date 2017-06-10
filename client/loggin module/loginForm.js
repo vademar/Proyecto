@@ -4,9 +4,11 @@
 		myTemplates.set("registros");
 	},
 
+
 	"click #close" : function(e){
 		e.preventDefault();
 		$(".panelForm").css("opacity",0);
+
 	},
 	"submit form" : function(e){
 		//SERVIDOR

@@ -22,7 +22,7 @@ div.landing:before, div.landing:after {
 #intro, #work, #team {padding-top: 4rem;}
 
 #index-fondo {
-    min-height: 900px;
+    min-height: 1050px;
     max-height: 1600px;
     background-image:url(imagen/fondo.jpg);
     -webkit-background-size: cover;
@@ -279,7 +279,7 @@ nav a.button-collapse {
 
 .card-avatar .waves-effect {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .card-avatar img {
