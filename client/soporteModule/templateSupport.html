@@ -1,68 +1,66 @@
 <template name="itemConnection">
-	<li class="collection-item avatar" id="users_list">
+	
+	<li  id="users_list">
 		<img src="images/yuna.jpg" alt="" class="circle">
-		<span class="title">{{idUs}}</span>
+		<span class="title">{{username}}</span>
 		
 	</li>
 </template>
-
-<template name="templateSupport">
-	<div class="row">
-		<div class="col s4"> 
-			<ul class="collection">
-					{{# if ready}}
-					{{#each user_connection_list}}
-		            {{>itemConnection}}
-					{{/each}}
-				{{else}}
-					<b>Cargando Datos</b>
-				{{/if}}
-
-				<!--<li class="collection-item avatar">
-					<img src="images/yuna.jpg" alt="" class="circle">
-					<span class="title">Title</span>
-					<p>First Line <br>
-						Second Line
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-				</li>
-				<li class="collection-item avatar">
-					<i class="mdi-file-folder circle"></i>
-					<span class="title">Title</span>
-					<p>First Line <br>
-						Second Line
-					</p>
-					<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-				</li>-->
-			</ul>
-		</div>-->
-		<div class="col s8"> 
-			<div class="row">
-				<div class="col s12 chat">
-					<div class="row">
-					   
-						<div class="row">
-							<div class="col s10">
-								<div class="card-panel teal">
-									<span class="white-text"><B>tomas></B> I am a very simple card. I am good at containing small bits of information.
-										I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-									</span>
-								</div>
-							</div>
-						</div>
-						<div class="row">
+<template name="msn_template">
+	<div id="contenedor">
+	{{#if ready}}
+		{{#each list_msn}}
+			{{#if idMe}}
+				<div class="row">
 							<div class="col s2">
 								
 							</div>
 							<div class="col s10">
 								<div class="card-panel deep-purple darken-1">
-									<span class="white-text"><B>Ditmar></B> I am a very simple card. I am good at containing small bits of information.
-										I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+									<span class="white-text"><B>{{user_source.username}}  </B>
+									{{message}}
 									</span>
 								</div>
 							</div>
 						</div>
-						
+			{{else}}
+				<div class="row">
+							<div class="col s10">
+								<div class="card-panel teal">
+									<span class="white-text"><B>{{user_destination.username}}</B>
+									{{message}}
+									</span>
+								</div>
+							</div>
+						</div>
+			{{/if}}
+			
+		{{/each}}
+	{{else}}
+		<b>is Loadding data...</b>
+	{{/if}}
+	</div>
+</template>
+<template name="templateSupport">
+	<div class="row">
+		<div class="col s4"> 
+			<ul class="collection">
+				{{# if ready}}
+					{{#each user_connection_list}}
+		{{>itemConnection username=user_list.username _id=user_list._id}}
+					{{/each}}
+				{{else}}
+					<b>Cargando Datos</b>
+				{{/if}}
+			</ul>
+		</div>
+		<div class="col s8"> 
+			<div class="row">
+				<div class="col s12 chat">
+					<div class="row">
+						<div class="rectangle_hidden">
+							{{>msn_template}}	
+						</div>
 					</div>	
 				</div>
 				<div class="col s12">
@@ -74,10 +72,26 @@
 								<input type="text" class="form-control" id="" name="msn" placeholder="Messages">
 							</div>
 						</div>	
+						
 					</form>
+                      <a href="#modal12"><i class="material-icons">input</i>add file </a>
 				</div>
+                
 			</div>
 			
 		</div>
+
 	</div>
+	{{formUpload}}
+</template>
+<template name="formUpload">
+	<div id="modal12" class="modal">
+       <div class="modal-content">
+           <h4>Modal Header</h4>
+           <p>A bunch of text</p>
+       </div>
+       <div class="modal-footer">
+             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+       </div>
+  </div>
 </template>

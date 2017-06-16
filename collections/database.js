@@ -1,3 +1,10 @@
+FILE = new	FilesCollection({
+     storagePath: "/D:\BASE DE DATOS\files proyecto1",//en que parte del servidor se van a guardar las img
+     downloadRoute: "D:\BASE DE DATOS\files proyecto1/download",//
+     collectionName: "files",
+     allowClient: false,
+});
+
 CHAT = new  Mongo.Collection("chat");
 CONNECT = new Mongo.Collection("connect");
 var chatSchema = new SimpleSchema({

@@ -1,5 +1,7 @@
 <template name="templateClient">
+	
 	{{#if conectado}}
+
 		{{>templateFormChat}}
 	{{else}}
 		{{>connect_template}}
@@ -18,53 +20,49 @@
 	<div class="row">
 		<div class="col s12"> 
 			<div class="row">
-				<div class="col s12 chat1">
-					<div class="row">
+				<div class="col s12 chat">
+					<div class="rectangle_hidden_client">
+						<div class="container_chat">
 						<div class="row">
-							<div class="col s10">
-								<div class="card-panel1 teal">
-									<span class="white-text"><B>tomas></B> 
-									</span>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col s2">
+						{{#each list_msn}}
+							{{#if idMe}}
+								<div class="row">
+									<div class="col s2">
 								
-							</div>
-							<div class="col s10">
-								<div class="card-panel1 deep-purple darken-1">
-									<span class="white-text"><B>Ditmar></B> I 
+									</div>
+								<div class="col s10">
+									<div class="card-panel deep-purple darken-1">
+										<span class="white-text"><B>{{user_source.username}}></B> {{message}} 
 									</span>
 								</div>
 							</div>
 						</div>
-						<div class="row">
+							{{else}}
+								<div class="row">
 							<div class="col s10">
-								<div class="card-panel1 teal">
-									<span class="white-text"><B>tomas></B> I 
+								<div class="card-panel teal">
+									<span class="white-text"><B>{{user_source.username}} ></B> {{message}}
 									</span>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col s10">
-								<div class="card-panel1 teal">
-									<span class="white-text"><B>tomas></B> I 
-									</span>
-								</div>
-							</div>
-						</div>
+							{{/if}}
+						{{/each}}
+						
 
+					</div>
 					</div>	
+					</div>
+					
+						
 				</div>
 				<div class="col s12">
-					<form action="" method="POST" class="chatform1">
+					<form action="" method="POST" class="chatform">
 						<div class="input-field"> 
 							<div class="form-group">
 								
 								<span class="help-block"></span>
-								<input type="text" class="form-control" id="" placeholder="Messages">
+								<input type="text" name="msn" class="form-control" id="" placeholder="Messages">
 							</div>
 						</div>	
 					</form>

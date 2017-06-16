@@ -344,3 +344,12 @@ footer.page-footer {
 #users_list{
     cursor: pointer;
 }
+.rectangle_hidden,.rectangle_hidden_client{
+    height: 400px;
+    width: 600px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+.rectangle_hidden_client{
+    width:100%;
+}
