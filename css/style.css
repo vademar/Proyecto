@@ -330,3 +330,17 @@ footer.page-footer {
     max-height: 430px;
     background-image:url(imagen/fondo.jpg);
 }
+.chatform1{
+    color:#fff;
+}
+#client1{
+    background-color:#fff;
+    color:#000;
+}
+.card-panel1{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#users_list{
+    cursor: pointer;
+}
