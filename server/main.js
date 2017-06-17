@@ -2,9 +2,6 @@ import { Meteor } from 'meteor/meteor';
  
 Meteor.startup(() => {
 
-	Meteor.publish("getFiles",function(){
-              return FILES.find().cursor;//para las imagenes hayq poner siempre eso
-	});
 	Meteor.publishComposite("getMSN",function(idUs,idMe){
 		return {
 			find(){

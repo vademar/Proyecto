@@ -1,4 +1,8 @@
 Template.msn_template.onRendered(function(){
+	//function test(){
+	//	console.log(" "+$("#contenedor").height());
+	//}
+	//setInterval(test,20);
 	$("#contenedor").resizeDiv(function(num){
 		$(".rectangle_hidden").animate({scrollTop:num},500);
 	});
@@ -70,6 +74,3 @@ Template.msn_template.helpers({
 	}
 
 });	
-Template.formUpload.onRendered(function(){
-        $(".moda").modal();
-});
