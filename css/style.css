@@ -314,21 +314,20 @@ footer.page-footer {
     line-height: 2 ; font-size: 1em;
 }
 .panelForm{
-  background:#fff;
-  color: #000;
-  position: fixed;
-  top: 60px;
-  left: 50vw;
-  width: 40vw;
-  height: auto;
-  transition: all .5s;
-  z-index:100;
-  padding:10px;
-  opacity:0;
-  box-shadow:0px 0px 0px #333
-  min-height: 200px;
+    position: fixed;
+    top: 60px;
+    left: 50vw;
+    width: 40vw;
+    height: auto;
+    transition: all .5s;
+    z-index:100;
+    padding:10px;
+    opacity:1;
+    box-shadow:0px 0px 0px #333
+    min-height: 200px;
     max-height: 430px;
     background-image:url(imagen/fondo.jpg);
+    display:none;
 }
 .chatform1{
     color:#fff;

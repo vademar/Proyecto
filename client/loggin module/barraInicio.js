@@ -11,7 +11,8 @@ Template.barraInicio.helpers({
  
 Template.barraInicio.events({
 	"click #Login" : function(){
-		$(".panelForm").css("opacity",1)
+		$(".panelForm").css("opacity",1);
+		$(".panelForm").css("display","inline");
 	},
 	"click #Logout" : function(){
 		Meteor.logout();
