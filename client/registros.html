@@ -6,101 +6,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">  
 <nav id="index-fondo">
   {{>barraInicio}}
-    <div class="container"> 
-     
-        <div class="row">
-            <div class="col s10">
-                <form class="col s12" action="" method="post">
-                    <div class="row">
-                      <div class="input-field col s6">
-                        <div class="row">
-                          <form class="col s12">
-                            <div class="row">
-                              <div class="input-field col s12">
-                                 <div class=" col s2">
-                                   <label for="username">Nombre</label>
-                                 </div>
-                                 <div class="col s10">
-                                   <input id="" type="text" class="form-control" name="Nombre">
-                                 </div>
-                                
-                                
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="input-field col s12">
-                                 <div class=" col s2">
-                                   <label for="username">Apellido</label>
-                                 </div>
-                                 <div class="col s10">
-                                   <input id="" type="text" class="form-control" name="Apellido">
-                                 </div>
-                                
-                                
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="input-field col s12">
-                                 <div class=" col s2">
-                                   <label for="username">username</label>
-                                 </div>
-                                 <div class="col s10">
-                                   <input id="" type="text" class="form-control" name="username">
-                                 </div>
-                                
-                                
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="input-field col s12">
-                                <div class="col s2">
-                                <label for="password">password</label>
-                                  
-                                </div>
-                                 <div class="col s10"> 
-                                   <input id="" type="password" class="form-control" name="password">
-                                 </div>
-                                
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="input-field col s12">
-                                 <div class="col s2">
-                                    <label for="email">Email</label>
-                                 </div>
-                                 <div class="col s10">
-                                   <input id="" type="email" class="form-control" name="email">
-                                 </div>
-                                
-                               
-                              </div>
-                            </div>
-                                  <button type="submit" class="btn">Crear cuenta</button>
-                          </form>
-                        </div>
-                      </div>
-                     </div>
-                </form>
-            </div>
+  <div class="container"> 
+    <div class="row">
+      <div class="col s10">
+        <form  action="" method="POST" >
+          <div class="row">
             <div class="col s2">
-                <h5 class="white-text">Tambien: </h5>
-                <ul>
-                    <li>
-                        <a href="http://twitter.com" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter" /></a>
-
-                    </li>
-                    <li>
-                        <a rel="author" href="https://plus.google.com" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32  /></a>
-                    </li>
-                    <li>
-                        <a href="http://www.facebook.com" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32  /></a>
-                    </li>
-                </ul>
+                <label>Nombres</label>
             </div>
-        </div>
-      
+            <div class="col s7">
+                <input id="Nombre" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s2">
+                <label>Apellidos</label>
+            </div>
+            <div class="col s7" >
+                <input id="Apellido" type="text" class="validate">
+            </div>    
+          </div>
+          <div class="row">
+            <div class="col s2">
+                <label>Password</label>
+            </div>
+            <div class="col s7">
+                <input id="password" type="Password" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s2">
+                <label>Email</label>
+            </div>
+            <div class="col s7">
+                <input id="email" type="text" class="validate">
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn">Crear cuenta</button>
+          </div>
+        </form>
+      </div>
+      <div class="col s2">
+        <h5 class="white-text">Tambien: </h5>
+          <ul>
+            <li>
+              <a href="http://twitter.com" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter" /></a>
+            </li>
+            <li>
+              <a rel="author" href="https://plus.google.com" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32  /></a>
+            </li>
+            <li>
+              <a href="http://www.facebook.com" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32  /></a>
+            </li>
+          </ul>
+      </div>
     </div>
+  </div>
 </nav>
-
-    
 </template>

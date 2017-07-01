@@ -9,9 +9,7 @@ Template.registros.events({
 		"Nombre" : e.target.Nombre.value,
 		"Apellido" : e.target.Apellido.value,
 		"email" : e.target.email.value,
-		"username" : e.target.username.value,
 		"password" : e.target.password.value,
-      
 	};
 	Accounts.createUser(user, function(e){
 				console.log(user);

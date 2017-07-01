@@ -314,6 +314,7 @@ footer.page-footer {
     line-height: 2 ; font-size: 1em;
 }
 .panelForm{
+    color: white;
     position: fixed;
     top: 60px;
     left: 50vw;
@@ -351,4 +352,7 @@ footer.page-footer {
 }
 .rectangle_hidden_client{
     width:100%;
+}
+span.benefit {
+        color:red;
 }
