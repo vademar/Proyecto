@@ -58,6 +58,11 @@ Meteor.startup(() => {
 			}
 			return {value:false};
 		},
+		"crearcurso": function(msnObj){
+			
+			Cursos.insert(msnObj);
+			return true;
+		},
 		"createConnection": function(idus){
 			
 			var id = CONNECT.insert({idUs:idus,connectionDate:new Date(),disconnectionDate:new Date(),stade:true});
@@ -71,5 +76,8 @@ Meteor.startup(() => {
 			CHAT.insert(msnObj);
 			return true;
 		}
+	});
+	Meteor.publish('findcurso',function(){
+		return Cursos.find();
 	});
 });

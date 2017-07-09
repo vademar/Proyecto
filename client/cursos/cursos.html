@@ -1,35 +1,39 @@
-
-<template name="cursos">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+<template name="link">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-<div>
-<nav id="index-fondo"> 
-  {{>barraInicio}}
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+</template>
+<template name="cursos">
+  {{>link}}
+
+{{>menu}}
+<div>   
   <div class="container">
     <div class="row">
-      <div class="col s12">
-        <div class="card">
-          <nav id="linkend-curso" class="curso_color" >  
-            <div class="col s3">
-              <div class="card-content">
-                <img class="activator" src="/imagen/project1.png" width=200 height=180>
+    <div class="col s12">
+      {{#each findcurso}}
+        
+      
+            <div class="col s6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="imagen/nodejs.jpg">
+                  <span class="card-title">{{nombre}}</span>
+                </div>
+                <div class="card-content">
+                  <p>{{descripcion}}</p>
+                </div>
+                <div class="card-action" style="text-align: center;">
+                  <a href="#">TOMAR CURSO</a>
+                </div>
               </div>
             </div>
-            <div class="col s9">
-              <div class="card-content">
-                <a href="desarrollo" class="card-title activator brown-text text-lighten-4">Curso de Diseño y Desarrollo </a>
-                <p id = interlineado>
-                  En el Curso Superior de Diseño y Desarrollo Web te convertirás en un desarrollador multidisciplinar, capaz de ofrecer soluciones personalizadas mediante la experiencia de usuario, el dominio de los lenguajes de programación más modernos, el posicionamiento web o la creación de aplicaciones móviles.
-                </p>
-              </div>
-            </div>
-          </nav>
-        </div> 
-      </div>
-      <div class="col s12">
+        
+      {{/each}}
+       </div>
+     <!-- <div class="col s12">
         <div class="card">
           <nav id="linkend-curso" class="curso_color" >  
             <div class="col s9">
@@ -50,8 +54,8 @@
             </div>
           </nav>
         </div> 
-      </div>
-      <div class="col s12">
+      </div> -->
+      <!--<div class="col s12">
         <div class="card">
           <nav id="linkend-curso" class="curso_color" >  
             <div class="col s3">
@@ -67,12 +71,12 @@
             </div>
           </nav>
         </div> 
-      </div>  
+      </div>   -->
     </div>
   </div>
  
 
-</nav>
+
 
 </div>
 

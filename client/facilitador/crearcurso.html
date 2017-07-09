@@ -1,0 +1,48 @@
+<template name="crearcurso">
+	{{>link}}
+	{{>menu}}
+	<br />
+	<div class="container" style="width: 40%">
+		<div class="row">
+         <form class="col s12">  
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="Nombre" name="nombre" id="nombre" type="text" class="validate">
+                  <label for="email">Nombre</label>
+               </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="Descripcion" name="descripcion" id="descripcion" type="text" class="validate">
+                  <label for="email">Descripcion</label>
+               </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="Fecha de inicio" name="inicio" id="email" type="date" class="validate">
+                  <label for="email">Fecha de inicio</label>
+               </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input placeholder="Fecha de fin" name="fin" id="email" type="date" class="validate">
+                  <label for="email">Fecha de fin</label>
+               </div>
+            </div>
+            <div class="row">
+               <div class="input-field col s12">
+                  <input id="image" type="file" class="validate">
+                 
+               </div>
+            </div> 
+            <div style="text-align: center;">
+            	<button  class="btn waves-effect waves-light" type="submit" name="action">Crear Curso
+			    <i class="material-icons right">send</i>
+			</button>
+            </div>
+            
+                
+         </form>       
+      </div>
+	</div>
+</template>

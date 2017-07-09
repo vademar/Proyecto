@@ -31,3 +31,33 @@ var connectSchema = new SimpleSchema({
 	}
 });
 CONNECT.attachSchema(connectSchema);
+
+
+
+Cursos = new  Mongo.Collection("cursos");
+var cursosSchema = new SimpleSchema({
+	nombre: {
+		type:String
+	},
+	descripcion: {
+		type:String
+	},
+	inicio: {
+		type:Date
+	},
+	fecha: {
+		type:Date
+	},
+	imgId: {
+		type:String
+	},
+	usersId:{
+		type: String,
+		autoValue:function(){
+			return	Accounts.user()._id;
+		}
+	}
+});
+
+Cursos.attachSchema(cursosSchema);
+
