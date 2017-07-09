@@ -58,6 +58,10 @@ Meteor.startup(() => {
 			}
 			return {value:false};
 		},
+		"subirmaterial": function(msnObj){
+			Material.insert(msnObj);
+			return true;
+		},
 		"crearcurso": function(msnObj){
 			
 			Cursos.insert(msnObj);

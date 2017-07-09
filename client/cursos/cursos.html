@@ -7,78 +7,51 @@
 </template>
 <template name="cursos">
   {{>link}}
-
-{{>menu}}
+  {{#if currentUser}}
+    {{#if  isInRole 'facilitador' 'facilitador' }}
+        {{>menu}}
+    {{else}}
+        {{>menuestudiante}} 
+    {{/if}}
+  {{else}}
+    {{>barraInicio}}
+  {{/if}}
 <div>   
   <div class="container">
     <div class="row">
     <div class="col s12">
       {{#each findcurso}}
-        
-      
             <div class="col s6">
               <div class="card">
                 <div class="card-image">
-                  <img src="imagen/nodejs.jpg">
+                  <img src="/imagen/nodejs.jpg">
                   <span class="card-title">{{nombre}}</span>
                 </div>
                 <div class="card-content">
                   <p>{{descripcion}}</p>
                 </div>
-                <div class="card-action" style="text-align: center;">
-                  <a href="#">TOMAR CURSO</a>
-                </div>
+                {{#if currentUser}}
+                     {{#if isInRole 'estudiante' 'estudiante' }}
+                          <div class="card-action" style="text-align: center;">
+                            <a href="#">TOMAR CURSO</a>
+                          </div>
+                      {{else}}
+                          {{#if  isInRole 'facilitador' 'facilitador' }}
+                              <div class="card-action" style="text-align: center;">
+                                <a href="#">EDITAR CURSO</a>
+                                <a href="/SUBIRMATERIAL/{{_id}}">SUBIR MATERIAL</a>
+                              </div>
+                          {{/if}}
+                      {{/if}}
+                {{/if}}
+                
+                
               </div>
             </div>
         
       {{/each}}
        </div>
-     <!-- <div class="col s12">
-        <div class="card">
-          <nav id="linkend-curso" class="curso_color" >  
-            <div class="col s9">
-              <div class="card-content">
-
-              <a href= "registros" class="card-title activator brown-text text-lighten-4">Cursos de HTML 5</a>
-               <p id = interlineado>
-                  En este curso aprenderás a escribir etiquetas HTML5, cómo se clasifican y cuáles son sus funciones. Además las propiedades CSS necesarias para dar una apariencia estética a nuestros sitios web.
-                </p>
-              </div>
-            </div>
-            <div class="col s3">
-              <div class="card-content">
-               
-                <img src="/imagen/html5.png" width=200 height=180>
-                
-              </div>
-            </div>
-          </nav>
-        </div> 
-      </div> -->
-      <!--<div class="col s12">
-        <div class="card">
-          <nav id="linkend-curso" class="curso_color" >  
-            <div class="col s3">
-                <img class="activator" src="/imagen/nodejs.jpg" width=200 height=200>
-            </div>
-            <div class="col s9">
-              <div class="card-content">
-              <a href="registros" class="card-title activator brown-text text-lighten-4">Curso de nodejs</a>
-                <p id = interlineado>
-                  En este curso aprenderemos a crear aplicaciones en tiempo real en Node.js, desde cero y paso a paso, desarrollando un proyecto real que nos permitirá aplicar los conocimientos obtenidos. Node.js es una plataforma que nos permite utilizar JavaScript desde el lado del servidor. Solo necesitas tener conocimientos previos de este lenguaje.
-                </p>
-              </div>
-            </div>
-          </nav>
-        </div> 
-      </div>   -->
     </div>
   </div>
- 
-
-
-
 </div>
-
-
 </template>
