@@ -28,6 +28,20 @@ Meteor.startup(() => {
 			]
 		}
 	});
+	Meteor.publishComposite("listaMaterial",function(id){
+		return {
+			find(){
+				return Material.find({cursId:id});
+			},
+			children:[
+				{
+					find(mate){
+						return Cursos.find({_id:mate.id});
+					}
+				}
+			]
+		}
+	});
 
 	Meteor.publishComposite("getConnections",{
 		find(){

@@ -33,7 +33,7 @@
                 {{#if currentUser}}
                      {{#if isInRole 'estudiante' 'estudiante' }}
                           <div class="card-action" style="text-align: center;">
-                            <a href="#">TOMAR CURSO</a>
+                            <a href="/tomarcurso/{{_id}}">TOMAR CURSO</a>
                           </div>
                       {{else}}
                           {{#if  isInRole 'facilitador' 'facilitador' }}
