@@ -42,6 +42,20 @@ Meteor.startup(() => {
 			]
 		}
 	});
+	Meteor.publishComposite("pregunta",function(id){
+		return {
+			find(){
+				return Pregunta.find({idcurso:id});
+			},
+			children:[
+				{
+					find(mate){
+						return Meteor.users.find({_id:mate.idusuario});
+					}
+				}
+			]
+		}
+	});
 
 	Meteor.publishComposite("getConnections",{
 		find(){
@@ -74,6 +88,10 @@ Meteor.startup(() => {
 		},
 		"subirmaterial": function(msnObj){
 			Material.insert(msnObj);
+			return true;
+		},
+		"preguntass": function(msnObj){
+			Pregunta.insert(msnObj);
 			return true;
 		},
 		"crearcurso": function(msnObj){

@@ -5,77 +5,7 @@
         {{/if}}
     {{/if}}
 	<div class="row">
-		<div class="col s12">
-		<!--	<div class="col s6">
-				<div class="row">
-			        <div class="col s12 m10">
-			        {{#if readyMA}}
-						{{#each clases}}
-						   <div class="card blue-grey darken-1">
-				            <div class="card-content white-text">
-				              <span class="card-title">{{nombre}}</span>
-				              <p>{{descripcion}}</p>
-				            </div>
-				            <div class="card-action">
-				              <a href="#">Archivos</a>
-				              <a href="#">Chat</a>
-				            </div>
-				          </div>
-				        {{else}}
-				        	<h1>NO HAY MATERIAL</h1>
-
-						{{/each}}
-					{{/if}}
-			        </div>
-			      </div>
-			</div> 		
-			
-			
-			  <div class="col s12">
-			    <div class="col s12 m6 l2">
-			    	<div class="col s12 m12">
-			        {{#if readyMA}}
-						{{#each clases}}
-						   <div class="card blue-grey darken-1">
-				            <div class="card-content white-text">
-				              <span class="card-title">{{nombre}}</span>
-				              <p>{{descripcion}}</p>
-				            </div>
-				            <div class="card-action">
-				              <a href="#">Archivos</a>
-				              <a href="#">Chat</a>
-				            </div>
-				          </div>
-				        {{else}}
-				        	<h1>NO HAY MATERIAL</h1>
-
-						{{/each}}
-					{{/if}}
-			        </div>	
-			    </div>
-			    <div class="col s12 m6 l2">
-			    	<div class="col s12 m12">
-			        {{#if readyMA}}
-						{{#each clases}}
-						   <div class="card blue-grey darken-1">
-				            <div class="card-content white-text">
-				              <span class="card-title">{{nombre}}</span>
-				              <p>{{descripcion}}</p>
-				            </div>
-				            <div class="card-action">
-				              <a href="#">Responder</a>
-				             
-				            </div>
-				          </div>
-				        {{else}}
-				        	<h1>NO HAY MATERIAL</h1>
-
-						{{/each}}
-					{{/if}}
-			        </div>	
-			    </div>
-			  </div>-->	
-
+		
 			  <div class="row">
 		        <div class="col m6 l6">
 		        	{{#if readyMA}}
@@ -85,9 +15,10 @@
 				              <span class="card-title">{{nombre}}</span>
 				              <p>{{descripcion}}</p>
 				            </div>
-				            <div class="card-action">
-				              <a href="#">Responder</a>
-				             
+				            <div class="card-action" style="text-align: center;">
+				              <a href="#">Material</a>
+				              <a><strong>|</strong></a>
+				              <a href="#">Chat</a>
 				            </div>
 				          </div>
 				        {{else}}
@@ -97,12 +28,16 @@
 					{{/if}}	
 		        </div>
 		        <div class="col m6 l6">
-		        	{{#if readyMA}}
-						{{#each clases}}
+		        	<div class="row">
+		        		{{>preguntas}}
+					</div>
+		        	{{#if readyPre}}
+						{{#each pregu}}
 						   <div class="card blue-grey darken-1">
 				            <div class="card-content white-text">
-				              <span class="card-title">{{nombre}}</span>
-				              <p>{{descripcion}}</p>
+				              
+				              <p>{{mensaje}}</p>
+				              <span class="card-title">{{fecha}}</span>
 				            </div>
 				            <div class="card-action">
 				              <a href="#">Responder</a>
@@ -116,6 +51,18 @@
 					{{/if}}
 		        </div>
 		      </div>
-		</div>	
 	</div>
+</template>
+<template name="preguntas">
+	<form class="col s12">
+  		<div class="card-content white-text">
+  			<div class="input-field col s12">
+              <input placeholder="Pregunta" name="pregunta" id="pregunta" type="text" class="validate" style="color: black;">
+           </div>	
+  		</div>
+   		 <div style="text-align: center;">
+   			<button class="btn waves-effect waves-light" type="button" id="ANADIR" name="cargar">Añadir Respuesta
+	  		</button>
+   		</div>
+	</form>	
 </template>

@@ -80,3 +80,25 @@ var MaterialSchema = new SimpleSchema({
 });
 
 Material.attachSchema(MaterialSchema);
+
+
+Pregunta = new  Mongo.Collection("pregunta");
+var preguntaSchema = new SimpleSchema({
+	mensaje: {
+		type:String
+	},
+	idcurso: {
+		type:String
+	},
+	idusuario: {
+		type:String
+	},
+	fecha:{
+		type: Date
+	},
+	votos:{
+		type:Number
+	}
+});
+
+Pregunta.attachSchema(preguntaSchema);
