@@ -1,5 +1,5 @@
 Template.tomarcurso.helpers({
-	readMA: function(){
+	readyMA: function(){
 		return FlowRouter.subsReady("listaMateriales");
 	},
 	clases: function(){
