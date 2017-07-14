@@ -18,8 +18,11 @@
 				            <div class="card-action" style="text-align: center;">
 				              <a href="#">Material</a>
 				              <a><strong>|</strong></a>
-				              <a href="#">Chat</a>
+				              <a class="CHATS" href="#">Chat</a>
 				            </div>
+				           	<div class="chat" id="{{_id}}" style="display: none;">
+				            	{{>chatss}}	
+							</div>
 				          </div>
 				        {{else}}
 				        	<h1>NO HAY MATERIAL</h1>
@@ -52,6 +55,38 @@
 		        </div>
 		      </div>
 	</div>
+</template>
+<template name="chatss">
+		
+		<ul class="comments1">
+		{{#if readychat}}
+	    	{{#each listchat}}		
+			  <li class="comment">
+			    <section class="author">
+			      <img class="photo" src="http://www.gravatar.com/avatar/453cb640b1f272fb50086052e0c9e013.png">
+			      <span class="name">{{users.profile.nombre}}</span>
+			    </section>
+			    <section class="content">
+			      <p>{{mensaje}}</p>
+			    </section>
+			  </li>
+			{{else}}
+				<p>no hay comentarios</p>
+		  {{/each}}
+
+		{{/if}}
+		  <form>
+			  <div class="" style="padding: 10px;">
+	          <input id="last_name" type="text" class="validate" name="chattts" placeholder="Escriba un comentario">
+	          
+	        </div>
+	        <div style="text-align: center;">
+	        	<button class="btn waves-effect waves-light" type="submit" name="action">Enviar</button>	
+	        </div>
+        </form>
+		</ul>
+	
+
 </template>
 <template name="preguntas">
 	<form class="col s12">

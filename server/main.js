@@ -1,6 +1,20 @@
 import { Meteor } from 'meteor/meteor';
  
 Meteor.startup(() => {
+	Meteor.publishComposite("chatas",function(id){
+    return {
+      find(){
+      	console.log(Chateo.find({cursId:id}).fetch());
+        return Chateo.find({cursId:id});
+      },
+      children:[{
+          find(preg){
+          	console.log(Meteor.users.find({_id:preg.userId}).fetch());
+            return Meteor.users.find({_id:preg.userId});
+          }          
+        }]
+    }});
+
 
 	Meteor.publishComposite("getMSN",function(idUs,idMe){
 		return {
@@ -69,6 +83,11 @@ Meteor.startup(() => {
 	});
 
 	Meteor.methods({
+		"chatss": function(msnObj){
+		
+			Chateo.insert(msnObj);
+			return true;
+		},
 		"checkAccount": function(username){
 			
 			var t = Meteor.users.find({username:username}).fetch();

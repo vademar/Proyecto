@@ -1,3 +1,48 @@
+
+.comments1 {
+  
+  font: .85em/1.5em Helvetica, sans-serif;
+  padding: 1em; 
+  margin: 0; 
+  
+  
+}
+
+.comment {
+    list-style: none;
+    padding: 0 0 2em 6em; 
+    position: relative;
+}
+    .author {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4em;
+      text-align: right;
+      white-space: nowrap;
+     }   
+      .name {
+        color: rgba(255,255,255,.35);
+        display: block;
+        font-size: .75em;
+      }
+
+.photo {
+        
+        width: 2em;
+        border-radius: .25em;
+      }
+    
+      
+.content {
+     
+      padding: .25em 1em;
+      border-radius: .5em;
+      background: white;
+      position: relative;
+  }
+
+
 /* Custom Stylesheet */
 /**
  *

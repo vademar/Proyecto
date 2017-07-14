@@ -1,3 +1,27 @@
+Chateo = new Mongo.Collection("chats");
+var mensajesSchema =new SimpleSchema({
+    claseId : {
+        type:String,
+    },
+    userId : {
+        type:String,
+    },
+    mensaje : {
+        type : String
+    },
+    cursId : {
+        type : String
+    },
+    estado : {
+    	type : Boolean
+    }
+});
+
+Chateo.attachSchema(mensajesSchema);
+
+
+
+
 
 CHAT = new  Mongo.Collection("chat");
 CONNECT = new Mongo.Collection("connect");

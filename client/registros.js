@@ -6,10 +6,13 @@ Template.registros.events({
 	"submit form" : function(e){
 		
 	var user = {
-		"Nombre" : e.target.Nombre.value,
-		"Apellido" : e.target.Apellido.value,
+		"username":e.target.Nombre.value,
 		"email" : e.target.email.value,
 		"password" : e.target.password.value,
+		"profile":{
+			"nombre": e.target.Nombre.value,
+			"apellido":e.target.Apellido.value
+		}
 	};
 	Accounts.createUser(user, function(e){
 				console.log(user);
