@@ -86,6 +86,8 @@ Template.chatss.events({
 		};
 		console.log(obj);
 		Meteor.call('chatss',obj);
+
+		e.target.chattts.value=" ";
 		/*$(document).keypress(function(e) {
 		    if(e.which == 13) {
 		        Meteor.call('chatss',obj);
