@@ -1,0 +1,25 @@
+<template name="editarcurso">
+{{>link}}
+{{>menu}}
+	<br />
+	<div class="container" style="width: 40%">
+
+		{{#each editcurs}}
+		<div class="row">
+         <form class="col s12">  
+			 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			 	<label for="">Nombre</label>
+			    <input class="mdl-textfield__input" type="text" id="username" name="nomb" value="{{nombre}}">
+			  </div>
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			  <label for="">Descripcion</label>
+			  	<textarea class="mdl-textfield__input" type="text" rows="5" id="text7" name="descri">{{descripcion}}</textarea>
+			  </div>
+            <div style="text-align: center;">
+            	<button id="actualizar" class="btn waves-effect waves-light" type="submit" name="action"><a href="/cursos/">actualizar curso<a></button>
+            </div>
+         </form>       
+      </div>
+      {{/each}}
+	</div>
+</template>

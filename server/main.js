@@ -83,6 +83,10 @@ Meteor.startup(() => {
 	});
 
 	Meteor.methods({
+		"editarcu": function(id,msnObj){
+			Cursos.update({_id:id},{$set:{'nombre':msnObj.nombre,'descripcion':msnObj.descripcion}});
+			return true;
+		},
 		"chatss": function(msnObj){
 		
 			Chateo.insert(msnObj);
