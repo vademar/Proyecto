@@ -53,7 +53,16 @@ Template.tomarcurso.helpers({
 });
 
 Template.chatss.helpers({
-	
+	username:function(){
+		return Accounts.user().profile.nombre;
+	},
+	yo(){
+		if( this.userId===Accounts.user()._id )
+		{
+			return true;
+		}
+		return false;
+	},
 	readychat:function(){
 		return FlowRouter.subsReady("chats");
 	},

@@ -38,7 +38,7 @@
 						{{#each pregu}}
 						   <div class="card blue-grey darken-1">
 				            <div class="card-content white-text">
-				           	  <p><strong>{{preguser._id}}</strong></p>
+				           	  <p><strong>{{preguser.profile.nombre}} {{preguser.profile.apellido}}</strong></p>
 				              <p>{{mensaje}}</p>
 				              <p>{{fecha}}</p>
 				            </div>
@@ -59,9 +59,8 @@
 <template name="chatss">
 		
 		<ul class="comments1">
-		{{#if readychat}}
-	    	{{#each listchat}}		
-			  <li class="comment">
+		
+		<!--	  <li class="comment">
 			    <section class="author">
 			      <img class="photo" src="http://www.gravatar.com/avatar/453cb640b1f272fb50086052e0c9e013.png">
 			      <span class="name">{{users.profile.nombre}}</span>
@@ -69,12 +68,48 @@
 			    <section class="content">
 			      <p>{{mensaje}}</p>
 			    </section>
-			  </li>
-			{{else}}
-				<p>no hay comentarios</p>
-		  {{/each}}
+			  </li> -->
+			  <div id="chats">
+				<div id="header-chats">
+					{{username}} 
+				</div>
+				<div id="mensajes">
+					<br />
+					{{#if readychat}}
+	    			{{#each listchat}}	
 
-		{{/if}}
+					
+					{{#if yo}}
+						<div class="mensaje-amigo">
+							<div class="contenido">
+								{{mensaje}}
+							</div>
+							<div class="flecha-derecha"></div>
+							<img style="width: 5%;" src="http://www.gravatar.com/avatar/453cb640b1f272fb50086052e0c9e013.png" alt="" class="foto">
+							c
+						</div>
+					{{else}}
+						<div class="mensaje-autor">
+							<img style="width: 5%;" src="http://www.gravatar.com/avatar/453cb640b1f272fb50086052e0c9e013.png" alt="" class="foto">
+							<div class="flecha-izquierda"></div>
+							<div class="contenido">
+
+								{{mensaje}}
+							</div>
+							
+						</div>
+					{{/if}}
+							{{else}}
+				<p>no hay comentarios</p>
+				  {{/each}}
+
+				{{/if}}
+
+				</div>
+
+			</div>
+
+	
 		  <form>
 			  <div class="" style="padding: 10px;">
 	          <input id="last_name" type="text" class="validate" name="chattts" placeholder="Escriba un comentario">
