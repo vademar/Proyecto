@@ -1,10 +1,9 @@
-Template.menu.events({
+Template.mainadmin.events({
 	"click #Logout" : function(){
 		Meteor.logout();
-	}
-
+	} 
 });
-Template.menu.helpers({
+Template.mainadmin.helpers({
 	username : function(){
 		return Accounts.user().profile.nombre;
 	}

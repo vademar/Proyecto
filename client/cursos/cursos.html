@@ -11,7 +11,11 @@
     {{#if  isInRole 'facilitador' 'facilitador' }}
         {{>menu}}
     {{else}}
-        {{>menuestudiante}} 
+        {{#if isInRole 'admin' 'admin'}}
+            {{>mainadmin}}
+        {{else}}
+          {{>menuestudiante}}
+        {{/if}} 
     {{/if}}
   {{else}}
     {{>barraInicio}}

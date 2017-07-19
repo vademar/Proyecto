@@ -16,6 +16,7 @@ Template.editarcurso.events({
     	"descripcion":e.target.descri.value
     };
     Meteor.call('editarcu',id,a);
+    FlowRouter.go('/cursos/');
     console.log(a);
   }
 });
