@@ -1,0 +1,80 @@
+<template name="perfil">
+	  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+          
+	{{>link}}
+	{{#if currentUser}}
+       {{#if isInRole 'facilitador' 'facilitador' }}
+              {{>mainfacilitador}}
+        {{else}}
+          {{#if isInRole 'admin' 'admin'}}
+              {{>mainadmin}}
+          {{else}}
+               {{#if isInRole 'estudiante' 'estudiante' }}
+                   {{>maines}}
+               {{else}}
+                     
+               {{/if}}
+          {{/if}}
+       {{/if}}
+    {{/if}}
+  <br><br><br><br>
+  <div class="col s12">
+    <div class="card">     
+      <div class="card-content">
+      	 {{#each datos}}
+        <div class="row" style="float: left;">
+          <div class="col s4 profile-pic" style="text-align: center;">
+            <img style="margin-left:100%; " 	class="circle responsive-img" src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png" alt="" />
+          </div>
+        </div>
+        <br><br><br><br><br>
+        <span class="card-title black-text">Nombre : {{profile.nombre}}</span><br />
+        <span class="card-title black-text">Apellido : {{profile.apellido}}</span><br />
+       <span class="card-title black-text">Gmail	 : {{email}}</span><br />
+       <span class="card-title black-text">Gmail</span><br />
+         <div class="card-action" style="text-align: center;">        
+           
+            <a id="datoseditar" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+             </div>
+
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4 style="text-align: center;">Editar tus datos</h4>
+                  <form class="col s12">
+                    <div style="color: black;">
+                        <div class="">     
+                          <label for="nombre">Nombre</label>
+                          <input type="text" id="nombre" value="{{profile.nombre}}">
+                        </div>
+                        <div class="">     
+                          <label for="apellido">Apellido</label>
+                          <input type="text" id="apellido" value="{{profile.apellido}}">
+                        </div>
+                        <div class="">     
+                          <label for="email">Email</label>
+                          <input type="text" id="email" value="{{email}}">
+                        </div>
+                        <div class="">
+                            <input type="file" id="imagen" name="imagen" class="form-control">
+                        </div>
+           
+
+                         <div class="card-action" style="text-align: center;">        
+                      <!--     <button id="modaleditar" class="waves-effect waves-light btn">Guardar</button> -->
+                           <button type="submit" value="Submit" class="waves-effect waves-light btn">Guardar</button>
+                           <a class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                         </div>
+                    </div>  
+                  </form>
+              </div>
+            </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+	  
+</template>
