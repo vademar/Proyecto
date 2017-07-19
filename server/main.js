@@ -83,6 +83,53 @@ Meteor.startup(() => {
 	});
 
 	Meteor.methods({
+		"editarperfil": function(id,msnObj){
+			Meteor.users.update({_id:id},
+				{$set:{ 'profile.nombre':msnObj.nombre,
+						'profile.apellido':msnObj.apellido,
+						'profile.imagen':msnObj.imagen,
+						'emails.0.address':msnObj.email
+					}});
+			return true;
+	    },
+
+		"eliminarrol":function(id){
+			var ver=Meteor.users.findOne({_id:id}).profile.tipo;
+			if(ver === "Facilitador")
+			{
+				Roles.removeUsersFromRoles(id, ['facilitador'], 'facilitador');
+			}
+			else
+			{
+				Roles.removeUsersFromRoles(id, ['estudiante'], 'estudiante')
+
+			}
+		
+			return true;
+		},
+
+		"habiUsuario": function(id){
+			Meteor.users.update(id,{$set:{'profile.estado':true}});
+			return true;
+		  },
+
+		  "desUsuario": function(id){
+			Meteor.users.update(id,{$set:{'profile.estado':false}});
+			return true;
+		  },
+
+		  "addEstu": function(id){
+			Roles.addUsersToRoles(id,['estudiante'], 'estudiante');
+			return true;
+		  },
+		  "addFaci": function(id){
+		  	// Meteor.users.update({_id:id},{$set:{}})
+		  	Roles.addUsersToRoles(id,['facilitador'], 'facilitador');
+			return true;	
+		  },
+
+
+
 		"editarcu": function(id,msnObj){
 			Cursos.update({_id:id},{$set:{'nombre':msnObj.nombre,'descripcion':msnObj.descripcion}});
 			return true;
@@ -136,6 +183,9 @@ Meteor.startup(() => {
 			return true;
 		}
 	});
+	Meteor.publish('img', function () {
+	    return Images.find().cursor;
+	 });
 	Meteor.publish('videos', function () {
 	    return Videos.find().cursor;
 	  });

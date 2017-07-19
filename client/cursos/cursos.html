@@ -14,7 +14,11 @@
         {{#if isInRole 'admin' 'admin'}}
             {{>mainadmin}}
         {{else}}
-          {{>menuestudiante}}
+            {{#if isInRole 'estudiante' 'estudiante'}}
+            {{>menuestudiante}}
+            {{else}}
+              {{>users}}
+            {{/if}}
         {{/if}} 
     {{/if}}
   {{else}}

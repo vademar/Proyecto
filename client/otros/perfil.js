@@ -1,6 +1,8 @@
 
 Template.perfil.helpers({
-	
+	img() {
+	    return Images.findOne(this.profile.imagen);
+	 },
 	datos : function(){
 		return Meteor.users.find({_id:Accounts.user()._id}).fetch();
 	},
@@ -19,17 +21,17 @@ Template.perfil.events({
 		var id=Accounts.user()._id;
 		
 		valor = document.getElementById("imagen").value;
-	     var imagenes;
+	     var imagen;
 	     if( valor != "" ) {
 	        var upload = Images.insert({
 	          file: e.target.imagen.files[0],
 	          streams: 'dynamic',
 	          chunkSize: 'dynamic',
 	        });
-	        imagenes=upload.config.fileId;
+	        imagen=upload.config.fileId;
 	     }else{
 	         var sacar=Meteor.users.findOne({_id:Accounts.user()._id}).profile.imagen;
-	        imagenes=sacar;
+	        imagen=sacar;
 	     }
 		
 		//console.log(e.target.imagen.value);
@@ -38,19 +40,20 @@ Template.perfil.events({
 			"nombre" : nombre,
 			"apellido" : apellido,
 			"email" : email,
-			"imagen":imagenes
+			"imagen":imagen
 	    };
-		Meteor.call("editperfil",id,obj);
-		$('#modal1').closeModal();
+		Meteor.call("editarperfil",id,obj);
+		//$('#modal1').closeModal();
+		$('#modal1').modal('close');
 		return false;
 	},
 	"click #datoseditar":function(){
 			
-			   $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			    $('.modal-trigger').leanModal();
-			  });
-			     
+	$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });	
 
 	}
 });
+Meteor.subscribe('img');

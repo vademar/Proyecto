@@ -16,7 +16,7 @@
                {{#if isInRole 'estudiante' 'estudiante' }}
                    {{>maines}}
                {{else}}
-                     
+                   
                {{/if}}
           {{/if}}
        {{/if}}
@@ -28,17 +28,17 @@
       	 {{#each datos}}
         <div class="row" style="float: left;">
           <div class="col s4 profile-pic" style="text-align: center;">
-            <img style="margin-left:100%; " 	class="circle responsive-img" src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png" alt="" />
+            <img style="margin-left:100%; " 	class="circle responsive-img" src="{{img.link}}" alt="" />
           </div>
         </div>
         <br><br><br><br><br>
         <span class="card-title black-text">Nombre : {{profile.nombre}}</span><br />
         <span class="card-title black-text">Apellido : {{profile.apellido}}</span><br />
        <span class="card-title black-text">Gmail	 : {{email}}</span><br />
-       <span class="card-title black-text">Gmail</span><br />
+    
          <div class="card-action" style="text-align: center;">        
            
-            <a id="datoseditar" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+            <a id="datoseditar" class="waves-effect waves-light btn modal-trigger" href="#modal1" style="color: black;">Edita tus datos</a>
              </div>
 
           <div id="modal1" class="modal">

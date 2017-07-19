@@ -1,6 +1,11 @@
+
+
+
 Template.registros.onRendered(function(){
-     $(".panelForm").css("opacity",0);
+	$("select").material_select();
 });
+
+
 Template.registros.events({
 
 	"submit form" : function(e){
@@ -11,7 +16,10 @@ Template.registros.events({
 		"password" : e.target.password.value,
 		"profile":{
 			"nombre": e.target.Nombre.value,
-			"apellido":e.target.Apellido.value
+			"apellido":e.target.Apellido.value,
+			"estado":false,
+			"tipo":e.target.tipo.value,
+			"imagen":'null'
 		}
 	};
 	Accounts.createUser(user, function(e){

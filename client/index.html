@@ -19,7 +19,7 @@
                {{#if isInRole 'estudiante' 'estudiante' }}
                    {{>mainestudiante}}
                {{else}}
-                     
+                     {{>users}}
                {{/if}}
           {{/if}}
        {{/if}}
@@ -28,3 +28,19 @@
     {{/if}}
 </div>
 </template>
+<template name="users">
+  <nav id="nav_f" class="default_color" role="navigation">
+      <div class="container">
+          <div class="nav-wrapper">
+              <img src="/imagen/uatf.png" width=62 height=62>
+              <a href="index" class="brand-logo">Seminario</a>
+              <ul id="cabecera" class="right hide-on-med-and-down">
+                  <li><a href="/cursos">Ver Cursos</a></li>
+                  {{#if currentUser}}
+                       <li><a href="" id="Logout">Usuario {{username}}</a></li>
+                  {{/if}} 
+              </ul>
+          </div>
+      </div>
+  </nav> 
+</template>  

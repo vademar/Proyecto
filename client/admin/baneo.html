@@ -1,0 +1,52 @@
+<template name="sistemabaneo">
+	{{>link}}
+	{{>adm}}
+	<div class="container">
+	  <h1>Usuarios	</h1>
+	  <div  class="table-editable">
+	    <table class="table table-hover">
+	    	<thead>
+		    	<tr>
+			        <th>Nombre</th>
+			        <th>Apellido</th>	
+			        <th>Estado</th> 
+			        <th></th>    
+			        <th>Roles</th>
+			  
+		      	</tr>
+	         </thead>
+	      {{#each lis}}
+	       <tbody>
+	      <tr>
+	      		<td scope="row">{{profile.nombre}}</td>
+		        <td>{{profile.apellido}}</td>
+		     	{{#if ver}}
+		 			<td>Activa</td>
+			        <td scope="row">
+			        	<button id="Deshabilitar" type="button" class="btn btn-primary active"><span class="glyphicon glyphicon-user"> Deshabilitar</span></button>
+			        </td>
+		        {{else}}
+					<td>Inactiva</td>
+			        <td scope="row">
+			        	<button id="Habilitar" type="button" class="btn btn-primary active"><span class="glyphicon glyphicon-user"> Habilitar</span></button>
+			        </td>
+				{{/if}}
+
+		          <td scope="row"> 
+		          {{#if permisos}}
+		          		  	<button id="deleterol" type="button" class="btn btn-primary active"><span class="glyphicon glyphicon-user"> Eliminar Rol</span></button>
+		          {{else}}
+		          		{{#if verestado}}
+		          			<button id="rolfacili" type="button" class="btn btn-primary active"><span class="glyphicon glyphicon-user"> Facilitador</span></button>
+		          		{{else}}	
+				          	<button id="rolestu" type="button" class="btn btn-primary active"><span class="glyphicon glyphicon-user"> Estudiante</span></button>
+		          		{{/if}}
+		          {{/if}}
+		        </td>
+		      </tr>	
+	         </tbody>
+	      {{/each}}       
+	    </table>
+	  </div>
+	</div>
+</template>

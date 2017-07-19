@@ -72,14 +72,8 @@ Template.preguntas.events({
 
 Template.tomarcurso.helpers({
 	ima() {
-		//Respuesta.findOne({userId:idUsuario}).texto
-		var im=Meteor.users.findOne({_id:this.userId}).profile.imagen;
+		var im=Meteor.users.findOne({_id:this.idusuario}).profile.imagen;
 		return Images.findOne(im);
-	},
-	fec(){
-		var  pre=Respuesta.findOne({_id:this._id}).fecha;
-		var  re= moment(pre).format("LLL");
-		return re;
 	},
 	readyPre: function(){
 		return FlowRouter.subsReady("preguntas");
@@ -100,9 +94,7 @@ Template.respuestasas.events({
 			userId : Accounts.user()._id,
 			pregId : pre,
 			cursId : FlowRouter.getParam('id')
-	
 		};
-		
 		Meteor.call('respuesta', obj);
 		 
 		 $('#formularioderespuesta').trigger("reset");
@@ -111,23 +103,7 @@ Template.respuestasas.events({
 	}
 });
 
-Template.preguntas.events({
-	
-	"click #ANADIR": function(e){
-		e.preventDefault();
-		var nomb;var element=document.getElementById('pregunta');if(element !=null){nomb=element.value;}else{nomb=null;}
 
-		var pre = {
-			"mensaje" : nomb,
-			"idcurso" : FlowRouter.getParam('id'),
-			"idusuario" : Accounts.user()._id,
-			"fecha": new Date(),
-			"votos" : 0
-		};
-		
-		Meteor.call("preguntass",pre);
-	}
-});
 Template.chatss.helpers({
 	username:function(){
 		return Accounts.user().profile.nombre;
@@ -138,6 +114,10 @@ Template.chatss.helpers({
 			return true;
 		}
 		return false;
+	},
+	ima() {
+		var im=Meteor.users.findOne({_id:this.userId}).profile.imagen;
+		return Images.findOne(im);
 	},
 	readychat:function(){
 		return FlowRouter.subsReady("chats");
