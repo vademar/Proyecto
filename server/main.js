@@ -139,4 +139,8 @@ Meteor.startup(() => {
 	Meteor.publish('findcurso',function(){
 		return Cursos.find();
 	});
+	Meteor.publish('lista',function(){
+		return Meteor.users.find();
+	});
+	
 });

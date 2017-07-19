@@ -16,5 +16,6 @@ Template.barraInicio.events({
 	},
 	"click #Logout" : function(){
 		Meteor.logout();
+		FlowRouter.go('/');
 	} 
 });

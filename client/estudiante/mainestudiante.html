@@ -1,19 +1,22 @@
 <template name="menuestudiante">
-
-	<nav id="nav_f" class="default_color" role="navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <img src="/imagen/uatf.png" width=62 height=62>
-                <a href="index" class="brand-logo">Seminario</a>
-                <ul id="cabecera" class="right hide-on-med-and-down">
-                    <li><a href="/cursos">Ver Cursos</a></li>
-                    <li><a href="#">Ver Facilitadores</a></li>
-                    <li><a href="#">Notificaciones</a></li>
-                    {{#if currentUser}}
-                   		 <li><a href="" id="Logout">Logout {{username}}</a></li>
-                    {{/if}} 
-                </ul>
-            </div>
+    {{>link}}
+    {{>maines}}
+</template>
+<template name="maines">
+<nav id="nav_f" class="default_color" role="navigation">
+    <div class="container">
+        <div class="nav-wrapper">
+            <img src="/imagen/uatf.png" width=62 height=62>
+            <a href="index" class="brand-logo">Seminario</a>
+            <ul id="cabecera" class="right hide-on-med-and-down">
+                <li><a href="/cursos">Ver Cursos</a></li>
+                <li><a href="/list">Ver Facilitadores</a></li>
+                <li><a href="#">Notificaciones</a></li>
+                {{#if currentUser}}
+                     <li><a href="" id="Logout">Estudiante {{username}}</a></li>
+                {{/if}} 
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 </template>
