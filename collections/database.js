@@ -1,3 +1,17 @@
+Videos = new FilesCollection({
+    storagePath: '/home/sergio/Escritorio/SEMI/data',
+    collectionName: 'Videos',
+    allowClientCode: false
+});
+
+Images = new FilesCollection({
+  storagePath: '/home/sergio/Escritorio/SEMI/data',
+  collectionName: 'Images',
+  allowClientCode: false,
+  cacheControl: 'public, max-age=31536000'
+});
+
+
 Chateo = new Mongo.Collection("chats");
 var mensajesSchema =new SimpleSchema({
     claseId : {
@@ -95,7 +109,7 @@ var MaterialSchema = new SimpleSchema({
 	descripcion: {
 		type:String
 	},
-	imgId: {
+	video: {
 		type:String
 	},
 	cursId:{

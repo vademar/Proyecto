@@ -1,4 +1,6 @@
 <template name="SUBIRMATERIAL">
+
+	{{>link}}
 	{{>menu}}
 	<br /><br />
 	<div class="container" style="width:40% ">
@@ -16,12 +18,21 @@
 		          <label for="descripcion">Descripcion</label>
 		        </div>
 		      </div>
-		      <div class="file-field input-field">
-			      <div class="btn">
-			        <span>File</span>
-			        <input type="file">
-			      </div>
-			   </div>
+
+		       <div class="row">
+		        <div class="input-field col s12">
+		            <input  type="file" id="imagen" name="imagen"  class="file-path validate">
+		          
+		        </div>
+		      </div>
+		   	
+			     	   
+			      
+			    
+			
+			        	
+			
+			   <br />
 			   <div style="text-align: center;">
 			   		<button class="btn waves-effect waves-light" type="submit" id="cargar" name="cargar">Cargar
 				  </button>

@@ -1,6 +1,7 @@
 Template.maines.events({
 	"click #Logout" : function(){
 		Meteor.logout();
+		FlowRouter.go('/');
 	} 
 });
 Template.maines.helpers({
