@@ -53,7 +53,16 @@ Template.tomarcurso.helpers({
 });
 
 Template.chatss.helpers({
-	
+	username:function(){
+		return Accounts.user().profile.nombre;
+	},
+	yo(){
+		if( this.userId===Accounts.user()._id )
+		{
+			return true;
+		}
+		return false;
+	},
 	readychat:function(){
 		return FlowRouter.subsReady("chats");
 	},
@@ -86,6 +95,8 @@ Template.chatss.events({
 		};
 		console.log(obj);
 		Meteor.call('chatss',obj);
+
+		e.target.chattts.value=" ";
 		/*$(document).keypress(function(e) {
 		    if(e.which == 13) {
 		        Meteor.call('chatss',obj);
