@@ -136,6 +136,9 @@ Meteor.startup(() => {
 			return true;
 		}
 	});
+	Meteor.publish('videos', function () {
+	    return Videos.find().cursor;
+	  });
 	Meteor.publish('findcurso',function(){
 		return Cursos.find();
 	});
