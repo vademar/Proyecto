@@ -4,12 +4,12 @@ Meteor.startup(() => {
 	Meteor.publishComposite("chatas",function(id){
     return {
       find(){
-      	console.log(Chateo.find({cursId:id}).fetch());
+      	
         return Chateo.find({cursId:id});
       },
       children:[{
           find(preg){
-          	console.log(Meteor.users.find({_id:preg.userId}).fetch());
+          	
             return Meteor.users.find({_id:preg.userId});
           }          
         }]
@@ -95,7 +95,7 @@ Meteor.startup(() => {
 		"checkAccount": function(username){
 			
 			var t = Meteor.users.find({username:username}).fetch();
-			console.log(t);
+			
 			if(t.length == 1){
 				return true;
 			}

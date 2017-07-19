@@ -12,10 +12,32 @@ Template.tomarcurso.helpers({
 });
 
 Template.tomarcurso.events({
+	"click .Archivos":function(e){
+		if($('.MATERIAL').css('display')=='block')
+		{
+			$('#'+this._id+'material').slideToggle('slow', function() {});
+			$(".chat").css({"display": "none"});
+		}
+		else{
+			$('#'+this._id+'material').slideToggle('slow', function() {});
+			$(".chat").css({"display": "none"});
+		}
+		return false;
+
+	},
 	"click .CHATS":function(e){
-		var idd = this._id;
-		chat.set(idd);
-		$('#'+this._id).slideToggle('slow', function() {});
+		var id = this._id;
+		chat.set(id);
+		if($('.chat').css('display')=='none')
+		{
+			$('#'+this._id).slideToggle('slow', function() {});
+			$(".MATERIAL").css({"display": "none"});
+			console.log("entra");
+		}
+		else{
+			$('#'+this._id).slideToggle('slow', function() {});
+			$(".MATERIAL").css({"display": "none"});
+		}
 		return false;
 	},
 });
@@ -41,6 +63,16 @@ Template.preguntas.events({
 });
 
 Template.tomarcurso.helpers({
+	ima() {
+		//Respuesta.findOne({userId:idUsuario}).texto
+		var im=Meteor.users.findOne({_id:this.userId}).profile.imagen;
+		return Images.findOne(im);
+	},
+	fec(){
+		var  pre=Respuesta.findOne({_id:this._id}).fecha;
+		var  re= moment(pre).format("LLL");
+		return re;
+	},
 	readyPre: function(){
 		return FlowRouter.subsReady("preguntas");
 	},
@@ -51,7 +83,43 @@ Template.tomarcurso.helpers({
 		return Meteor.users.findOne({_id:this.idusuario});
 	}
 });
+Template.respuestasas.events({
+	"submit form":function(e){
+		var pre=resp.get();
+		e.preventDefault();
+		var obj = {
+			texto  : e.target.email.value, 
+			userId : Accounts.user()._id,
+			pregId : pre,
+			cursId : FlowRouter.getParam('id')
+	
+		};
+		
+		Meteor.call('respuesta', obj);
+		 
+		 $('#formularioderespuesta').trigger("reset");
+		return false;
+	
+	}
+});
 
+Template.preguntas.events({
+	
+	"click #ANADIR": function(e){
+		e.preventDefault();
+		var nomb;var element=document.getElementById('pregunta');if(element !=null){nomb=element.value;}else{nomb=null;}
+
+		var pre = {
+			"mensaje" : nomb,
+			"idcurso" : FlowRouter.getParam('id'),
+			"idusuario" : Accounts.user()._id,
+			"fecha": new Date(),
+			"votos" : 0
+		};
+		
+		Meteor.call("preguntass",pre);
+	}
+});
 Template.chatss.helpers({
 	username:function(){
 		return Accounts.user().profile.nombre;
